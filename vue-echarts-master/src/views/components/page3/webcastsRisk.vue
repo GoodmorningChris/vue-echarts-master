@@ -7,6 +7,7 @@ import axios from 'axios';
 // import baseUrl from '../../../utils/interface.js'
 export default {
     name: 'webcastsRisk',
+    props:['msg'],
     data() {
         return {
           option :{
@@ -404,6 +405,19 @@ export default {
         },
     },
     mounted() {
+      console.log("11111111111111",this);
+      // return 'asd'
+      // if(this.props.msg=="pytorch"){
+      //   axios.get(`http://localhost:8090/company/getPyTorchInfo`).then((response)=>{
+      //     console.log(response)
+      //     for(let i=0;i<10;i++){
+      //       this.option.yAxis.data[i]=response.data[i]["domain"]
+      //       this.option.series[0].data[i]=response.data[i]["contributions"]
+      //       this.option.series[5].data[i].value=this.option.series[0].data[i]
+      //     }
+      //     this.setWebcasts()
+      //   })
+      // }else {
         axios.get(`http://localhost:8090/company/getTensorFlowInfo`).then((response)=>{
           console.log(response)
           for(let i=0;i<10;i++){
@@ -413,6 +427,7 @@ export default {
           }
           this.setWebcasts()
         })
+      // }
     },
 }
 </script>

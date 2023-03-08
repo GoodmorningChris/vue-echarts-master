@@ -53,7 +53,7 @@
                 <span class="angle2"></span>
                 <span class="angle3"></span>
                 <span class="angle4"></span>
-                <webcasts-risk ref='webcastsRisk'></webcasts-risk>
+                <webcasts-risk ref='webcastsRisk' msg="123"></webcasts-risk>
               </div>
             </div>
             <div class="right-2">
